@@ -44,7 +44,7 @@ class ThresholdCallback(callbacks.Callback):
 
 # Define your input_shape and encoding_dim
 input_shape = (1024,)  # Replace YOUR_DIM with the actual dimension
-encoding_dim = 512  # Replace YOUR_ENCODING_DIM with the actual dimension
+encoding_dim = 1  # Replace YOUR_ENCODING_DIM with the actual dimension
 
 # Define the data here
 data_size = 1  # Replace this with the size of your data
