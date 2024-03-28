@@ -1,55 +1,34 @@
-import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models, callbacks
 import os
+import hashlib
+import numpy as np
 import pickle
 
-# Define the autoencoder architecture with additional hidden layers
 def autoencoder(input_shape, encoding_dim):
-    # Encoder
-    # Encoder
     input_data = layers.Input(shape=input_shape)
     encoded = layers.Dense(encoding_dim, activation='relu')(input_data)
 
-    # Decoder
-    decoded = layers.Dense(input_shape[0], activation='relu')(encoded)
+    # At this point the representation is (encoding_dim)-dimensional
+    decoded = layers.Dense(input_shape[0], activation='sigmoid')(encoded)
 
-    # Autoencoder model
+    # This model maps an input to its reconstruction
     autoencoder_model = models.Model(input_data, decoded)
 
-    # Encoder model
-    encoder_model = models.Model(input_data, encoded)
+    # This model maps an input to its encoded representation
+    encoder = models.Model(input_data, encoded)
 
-    # Decoder model
-    decoder_input = layers.Input(shape=(encoding_dim,))
-    decoder_output = autoencoder_model.layers[-1](decoder_input)
-    decoder_model = models.Model(decoder_input, decoder_output)
+    # Create a placeholder for an encoded input
+    encoded_input = layers.Input(shape=(encoding_dim,))
 
-    return autoencoder_model, encoder_model, decoder_model
+    # Retrieve the last layer of the autoencoder model
+    decoder_layer = autoencoder_model.layers[-1]
 
-# Generate some dummy data
-data = np.round(np.random.rand(1, 1024), 0)  # Assuming MNIST-like data with 784 features
+    # Create the decoder model
+    decoder = models.Model(encoded_input, decoder_layer(encoded_input))
 
-# Normalize the data
-data /= np.max(data)
+    return autoencoder_model, encoder, decoder
 
-# Split data into training and validation sets
-train_size = int(1 * len(data))
-train_data, val_data = data, data[train_size:]
-
-# Define autoencoder parameters
-input_shape = (1024,)  # Assuming MNIST-like data
-encoding_dim = int(1024 / 2)  # Size of the compressed representation
-
-# Check if a model exists, if yes, load it
-if os.path.exists('autoencoder_model_zip.keras'):
-    autoencoder_model = tf.keras.models.load_model('autoencoder_model_zip.keras')
-    encoder_model = tf.keras.models.load_model('encoder_model_zip.keras')
-    decoder_model = tf.keras.models.load_model('decoder_model_zip.keras')
-    print("Loaded existing model.")
-else:
-    # Create the autoencoder if no model exists
-    autoencoder_model, encoder_model, decoder_model = autoencoder(input_shape, encoding_dim)
 
 # Define custom callback to stop training if loss falls below a threshold
 class ThresholdCallback(callbacks.Callback):
@@ -61,38 +40,63 @@ class ThresholdCallback(callbacks.Callback):
         if logs['loss'] <= self.threshold:
             print(f"\nReached loss threshold of {self.threshold}. Stopping training.")
             self.model.stop_training = True
-autoencoder_model.compile(optimizer='adam', loss='binary_crossentropy')
-threshold_callback = ThresholdCallback(threshold=1e-9)
-# Train the autoencoder with validation data
-history = autoencoder_model.fit(train_data, train_data, epochs=10000, batch_size=256, shuffle=True,
-                                callbacks=[threshold_callback])
 
-# Save models and training history
-autoencoder_model.save('autoencoder_model_zip.keras')
-encoder_model.save('encoder_model_zip.keras')
-decoder_model.save('decoder_model_zip.keras')
 
-# Save the training history as a pickle file
-with open('training_history.pkl', 'wb') as file:
-    pickle.dump(history.history, file)
+# Define your input_shape and encoding_dim
+input_shape = (1024,)  # Replace YOUR_DIM with the actual dimension
+encoding_dim = 512  # Replace YOUR_ENCODING_DIM with the actual dimension
 
-# Test the autoencoder
-encoded_data = encoder_model.predict(data)
-decoded_data = decoder_model.predict(encoded_data)
+# Define the data here
+data_size = 1  # Replace this with the size of your data
+data = np.random.binomial(1, 0.5, size=(data_size, *input_shape))
+autoencoder_model, encoder, decoder = autoencoder(input_shape, encoding_dim)
 
-# Print reconstructed data and original data
-print("Original data shape:", data.shape)
-print("Reconstructed data shape:", decoded_data.shape)
+if os.path.exists('encoder_model_zip.keras'):
+    #autoencoder_model = tf.keras.models.load_model('autoencoder_model_zip.keras')
 
-# Print reconstructed data and original data
-print("Original data:", np.round(data,0))
-print("Reconstructed data:", np.round(decoded_data,0))
+    encoder = tf.keras.models.load_model('encoder_model_zip.keras')
+    decoder = tf.keras.models.load_model('decoder_model_zip.keras')
 
-# Compare hashes
-import hashlib
-md5_hash_original = hashlib.md5(data).hexdigest()
-md5_hash_reconstructed = hashlib.md5(decoded_data).hexdigest()
-if md5_hash_original == md5_hash_reconstructed:
-    print("True")
+    shape = data.shape
+    dtype = data.dtype
+
+    with open("data.bin", "rb") as f:
+        loaded_data = np.frombuffer(f.read(), dtype=dtype)
+        data = loaded_data.reshape(shape)  # Original shape
+    # Reach the end of file
+    f.close()
+    print("Loaded existing model.")
 else:
-    print("False")
+    threshold_callback = ThresholdCallback(threshold=0.01)
+    autoencoder_model.compile(optimizer='adam', loss='binary_crossentropy')
+
+
+    # Saving data with pickle
+    with open('data.bin', 'wb') as f:
+        f.write(data.tobytes())
+    # Reach the end of file
+    f.close()
+    # Adjust the number of epochs and the batch size as needed
+    autoencoder_model.fit(data, data, epochs=100, batch_size=32, shuffle=True, callbacks=[threshold_callback])
+
+    #autoencoder_model.save('autoencoder_model_zip.keras')
+    encoder.save('encoder_model_zip.keras')
+    decoder.save('decoder_model_zip.keras')
+
+
+# FIX: compute encoded and decoded data
+encoded_data = encoder.predict(data)
+decoded_data = decoder.predict(encoded_data)  # Reconstructed data
+
+# Generate compressed data and reconstruct
+compressed_data = encoder.predict(data)
+reconstructed_data = decoder.predict(compressed_data)
+
+# Convert reconstructed data to binary format
+reconstructed_data_binary = np.where(reconstructed_data > 0.5, 1, 0)
+
+# Check if original data and reconstructed data are the same
+if np.array_equal(data, reconstructed_data_binary):
+    print("Original data and Reconstructed data are the same.")
+else:
+    print("Original data and Reconstructed data are different.")
