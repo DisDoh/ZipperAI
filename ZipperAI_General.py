@@ -3,114 +3,114 @@ from tensorflow.keras import layers, models, callbacks
 import numpy as np
 import os
 import matplotlib.pyplot as plt
+
 def autoencoder(input_shape, encoding_dim):
+    # --- Encoding Part ---
     input_data = layers.Input(shape=input_shape)
-    encoded = layers.Dense(512, activation='relu')(input_data)
-    encoded = layers.Dropout(0.3)(encoded)  # Dropout layer with rate 0.5
-    encoded = layers.Dense(encoding_dim, activation='sigmoid')(encoded)
-    encoded = layers.Dense(encoding_dim, activation='relu')(encoded)
-    encoded = layers.Dropout(0.3)(encoded)  # Dropout layer with rate 0.5
+    encoded = layers.Dense(512, activation='sigmoid')(input_data)
+    encoded = layers.Dropout(0.5)(encoded)
+    encoded = layers.Dense(256, activation='sigmoid')(encoded)
     encoded = layers.Dense(encoding_dim, activation='sigmoid')(encoded)
 
-    # At this point the representation is (encoding_dim)-dimensional
-    decoded = layers.Dense(512, activation='sigmoid')(encoded)
-    decoded = layers.Dense(512, activation='relu')(decoded)
+    # --- Decoding part ---
+    decoded = layers.Dense(256, activation='sigmoid')(encoded)
     decoded = layers.Dense(512, activation='sigmoid')(decoded)
-    decoded = layers.Dropout(0.3)(decoded)  # Dropout layer with rate 0.5
-    decoded = layers.Dense(input_shape[0], activation='relu')(decoded)
+    decoded = layers.Dense(input_shape[0], activation='sigmoid')(decoded)
 
-    # This model maps an input to its reconstruction
-    autoencoder_model = models.Model(input_data, decoded)
+    # Defining the models
+    autoencoder_model = models.Model(input_data, decoded)  # Complete autoencoder = encoder + decoder
+    encoder = models.Model(input_data, encoded)  # Just the encoder part
 
-    # This model maps an input to its encoded representation
-    encoder = models.Model(input_data, encoded)
-
-    # create a placeholder for an encoded (encoding_dim-dimensional) input
+    # Now the decoder part
     encoded_input = layers.Input(shape=(encoding_dim,))
-
-    # retrieve the layers of the autoencoder model
-    decoder_layer1 = autoencoder_model.layers[-5]  # added this line
-    decoder_layer2 = autoencoder_model.layers[-4]  # added this line
-    decoder_layer3 = autoencoder_model.layers[-3]
-    decoder_layer4 = autoencoder_model.layers[-2]
-    decoder_layer5 = autoencoder_model.layers[-1]
-
-    # create the decoder model
-    decoder_output = decoder_layer5(decoder_layer4(decoder_layer3(decoder_layer2(decoder_layer1(encoded_input)))))
-    decoder = models.Model(encoded_input, decoder_output)
+    decoder_layers = autoencoder_model.layers[-3:]  # Last 3 layers = decoder
+    decoder = encoded_input
+    for layer in decoder_layers:
+        decoder = layer(decoder)
+    decoder = models.Model(encoded_input, decoder)
 
     return autoencoder_model, encoder, decoder
 
-val_loss = []
-loss = []
+
+
 # Define custom callback to stop training if loss falls below a threshold
 class ThresholdCallback(callbacks.Callback):
     def __init__(self, threshold):
         super(ThresholdCallback, self).__init__()
         self.threshold = threshold
 
+        self.val_loss = []
+        self.loss = []
     def on_epoch_end(self, epoch, logs=None):
-        loss.append(logs['loss'])
-        val_loss.append(logs['val_loss'])
-        if epoch % 50 == 0:
+        self.loss.append(logs['loss'])
+        self.val_loss.append(logs['val_loss'])
+        if epoch % 10 == 0:
             # Plot the loss
-            plt.plot(loss, label='Training Loss')
-            plt.plot(val_loss, label='Validation Loss')
+            plt.plot(self.loss, label='Training Loss')
+            plt.plot(self.val_loss, label='Validation Loss')
             plt.xlabel('Epochs')
             plt.ylabel('Loss')
             plt.title('Loss vs. Epochs')
             plt.legend()
             plt.grid(True)
             plt.show()
+        if epoch % 200 == 0:
+            self.loss = []
+            self.val_loss = []
         if logs['loss'] <= self.threshold:
             print(f"\nReached loss threshold of {self.threshold}. Stopping training.")
             self.model.stop_training = True
 
 
 # Define your input_shape and encoding_dim
-input_shape = (1024,)  # Assuming input data size of 1024
-encoding_dim = 768  # Adjust the encoding dimension as needed
+input_shape = (8,)  # Assuming input data size of 1024
+encoding_dim = 4  # Adjust the encoding dimension as needed
 
 # Generate synthetic data
-num_samples = 2000
+num_samples = 4096
 data = np.random.binomial(1, 0.5, size=(num_samples, *input_shape))
 
 # Split data into training and validation sets
-validation_split = 0.2
+validation_split = 0.3
 num_validation_samples = int(num_samples * validation_split)
 x_train = data[num_validation_samples:]
 x_val = data[:num_validation_samples]
 
 autoencoder_model, encoder, decoder = autoencoder(input_shape, encoding_dim)
 
+threshold_callback = ThresholdCallback(threshold=0.001)
+autoencoder_model.compile(optimizer='adam', loss='binary_crossentropy')
+
+with open('data.bin', 'wb') as f:
+    f.write(data.tobytes())
+f.close()
+# Loading saved models
 if os.path.exists('encoder_model_zip.keras'):
     encoder = models.load_model('encoder_model_zip.keras')
-    decoder = models.load_model('decoder_model_zip.keras')
+    decoder.load_weights('decoder_weights_binary.weights.h5')
 
-    shape = data.shape
-    dtype = data.dtype
+    # Load your test data here
+    # For demonstration, let's assume you have test_data
 
-    with open("data.bin", "rb") as f:
-        loaded_data = np.frombuffer(f.read(), dtype=dtype)
-        data = loaded_data.reshape(shape)  # Original shape
-    f.close()
-    print("Loaded existing model.")
+    # Test the encoder and decoder with the test data
+    test_encoded_data = encoder.predict(data)
+    test_decoded_data = decoder.predict(test_encoded_data)
+
+    # Check if original data and reconstructed data are the same
+    if np.array_equal(data, np.round(test_decoded_data)):
+        print("Original data and Reconstructed data are the same.")
+    else:
+        print("Original data and Reconstructed data are different.")
 else:
-    threshold_callback = ThresholdCallback(threshold=0.01)
-    autoencoder_model.compile(optimizer='adam', loss='binary_crossentropy')
+    print("No saved models found.")
+# Train the model with validation data
+    history = autoencoder_model.fit(x_train, x_train, epochs=100000, shuffle=True, batch_size=64,
+                                validation_data=(x_val, x_val),
+                                callbacks=[threshold_callback])
 
-    with open('data.bin', 'wb') as f:
-        f.write(data.tobytes())
-    f.close()
+encoder.save('encoder_model_zip.keras')
 
-    # Train the model with validation data
-    history = autoencoder_model.fit(x_train, x_train, epochs=10000, batch_size=64,
-                                    validation_data=(x_val, x_val),
-                                    callbacks=[threshold_callback])
-
-    encoder.save('encoder_model_zip.keras')
-    decoder.save('decoder_model_zip.keras')
-
+decoder.save_weights('decoder_weights_binary.weights.h5')
 
 # FIX: compute encoded and decoded data
 encoded_data = encoder.predict(data)
@@ -121,3 +121,76 @@ if np.array_equal(data, np.round(decoded_data)):
     print("Original data and Reconstructed data are the same.")
 else:
     print("Original data and Reconstructed data are different.")
+
+# Function to chunk and pad the bit sequence
+def chunk_data(bit_sequence, chunk_size):
+    num_chunks = len(bit_sequence) // chunk_size
+    remainder = len(bit_sequence) % chunk_size
+    chunks = [bit_sequence[i * chunk_size: (i + 1) * chunk_size] for i in range(num_chunks)]
+    if remainder > 0:
+        # Append the last chunk that contains the remainder of the data
+        remainder_chunk = bit_sequence[-remainder:]
+        chunks.append(remainder_chunk)
+    return chunks
+
+# Function to remove padding from reconstructed data
+def remove_padding(reconstructed_data, original_lengths):
+    reconstructed_data_trimmed = []
+    start_index = 0
+    for length in original_lengths:
+        reconstructed_data_trimmed.append(reconstructed_data[start_index:start_index + length])
+        start_index += length
+    return np.concatenate(reconstructed_data_trimmed)
+
+# Load your PDF file as binary data
+filename = "test"
+with open(filename, 'rb') as obj:
+    pdf_binary_data = obj.read()
+
+# Convert the PDF binary data to a bit sequence
+bit_sequence = np.frombuffer(pdf_binary_data, dtype=np.uint8)
+def binary_to_bit_array(binary_data):
+    """Convert binary data to a bit array."""
+    bit_array = np.unpackbits(np.frombuffer(binary_data, dtype=np.uint8))
+    return bit_array
+
+# Convert the PDF binary data to a bit array
+bit_array = binary_to_bit_array(pdf_binary_data)
+# Chunk the bit sequence into 1024-bit chunks
+chunk_size = int(8)
+data_chunks = chunk_data(bit_array, chunk_size)
+
+# Define your input_shape and encoding_dim
+input_shape = (8,)  # Assuming input data size of 1024
+encoding_dim = 4  # Adjust the encoding dimension as needed
+
+# Reconstruct the data chunk by chunk using the specific model for each chunk
+reconstructed_data = []
+original_lengths = []  # Store original lengths of each chunk
+
+for i, chunk in enumerate(data_chunks):
+    # Assuming data_chunks contains binary data (0s and 1s)
+    chunk = np.array(list(chunk), dtype=np.float32)  # Convert binary data to float32 array
+    chunk = np.expand_dims(chunk, axis=0)
+
+    compressed_chunk = encoder.predict(chunk)
+    reconstructed_chunk = decoder.predict(compressed_chunk)
+    reconstructed_data.append(reconstructed_chunk.squeeze(0))  # Remove batch dimension
+    print(f"{i}/{len(data_chunks)}")
+    # Store original length of chunk
+    original_lengths.append(len(chunk[0]))
+
+# Convert the reconstructed data from float32 back to binary (0s and 1s) before saving
+reconstructed_data = np.round(reconstructed_data, 0)  # Convert probabilities to binary
+reconstructed_data = reconstructed_data.astype(np.uint8)
+
+# Convert the numpy arrays in reconstructed_data to binary strings
+reconstructed_data = [''.join(map(str, map(int, b))) for b in reconstructed_data]
+
+byte_array = bytearray([int(b, 2) for b in reconstructed_data])
+
+# Save the reconstructed binary data to a file
+with open("reconstructed_binary_file", "wb") as f:
+    f.write(byte_array)
+
+print("Reconstructed binary file saved.")
