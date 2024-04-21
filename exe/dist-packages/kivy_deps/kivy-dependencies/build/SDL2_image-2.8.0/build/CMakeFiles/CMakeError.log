@@ -1,0 +1,464 @@
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_4ea01 && [1/2] Building C object CMakeFiles/cmTC_4ea01.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_4ea01.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_4ea01.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: io.h: No such file or directory
+    1 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the setmode exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_731d5 && [1/2] Building C object CMakeFiles/cmTC_731d5.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_731d5.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_731d5.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘setmode’ undeclared (first use in this function)
+    8 |   return ((int*)(&setmode))[argc];
+      |                   ^~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:4:14: warning: parameter ‘argc’ set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the jbg_newlen exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_07528 && [1/2] Building C object CMakeFiles/cmTC_07528.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_07528.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_07528.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: jbig.h: No such file or directory
+    2 | #include <jbig.h>
+      |          ^~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <jbig.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef jbg_newlen
+  return ((int*)(&jbg_newlen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file GL/glut.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_16a19 && [1/2] Building C object CMakeFiles/cmTC_16a19.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_16a19.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_16a19.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: GL/glut.h: No such file or directory
+    1 | #include <GL/glut.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file GLUT/glut.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_8fbd4 && [1/2] Building C object CMakeFiles/cmTC_8fbd4.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_8fbd4.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_8fbd4.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: GLUT/glut.h: No such file or directory
+    1 | #include <GLUT/glut.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file OpenGL/gl.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7e5b8 && [1/2] Building C object CMakeFiles/cmTC_7e5b8.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_7e5b8.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_7e5b8.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: OpenGL/gl.h: No such file or directory
+    1 | #include <OpenGL/gl.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file OpenGL/glu.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_320aa && [1/2] Building C object CMakeFiles/cmTC_320aa.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_320aa.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing  -fPIE -o CMakeFiles/cmTC_320aa.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: OpenGL/glu.h: No such file or directory
+    1 | #include <OpenGL/glu.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test HAVE_MATH_LIBRARY failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7269e && [1/2] Building C object CMakeFiles/cmTC_7269e.dir/src.c.o
+[2/2] Linking C executable cmTC_7269e
+FAILED: cmTC_7269e 
+: && /usr/bin/cc -pthread  CMakeFiles/cmTC_7269e.dir/src.c.o -o cmTC_7269e   && :
+/usr/bin/ld: CMakeFiles/cmTC_7269e.dir/src.c.o: in function `main':
+src.c:(.text+0x33): undefined reference to `pow'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+    #include <math.h>
+    int main(int argc, char** argv) {
+      return (int)pow(argc, 2.5);
+    }
+  
+Determining if files OpenGL/glut.h exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_bfd0c && [1/2] Building C object CMakeFiles/cmTC_bfd0c.dir/HAVE_OPENGL_GLUT_H.c.o
+FAILED: CMakeFiles/cmTC_bfd0c.dir/HAVE_OPENGL_GLUT_H.c.o 
+/usr/bin/cc   -pthread  -fPIE -o CMakeFiles/cmTC_bfd0c.dir/HAVE_OPENGL_GLUT_H.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_OPENGL_GLUT_H.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_OPENGL_GLUT_H.c:2:10: fatal error: OpenGL/glut.h: No such file or directory
+    2 | #include <OpenGL/glut.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <OpenGL/glut.h>
+
+
+int main(void){return 0;}
+
+Determining if files shlwapi.h exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_ab3bb && [1/2] Building C object CMakeFiles/cmTC_ab3bb.dir/HAVE_SHLWAPI_H.c.o
+FAILED: CMakeFiles/cmTC_ab3bb.dir/HAVE_SHLWAPI_H.c.o 
+/usr/bin/cc   -pthread  -fPIE -o CMakeFiles/cmTC_ab3bb.dir/HAVE_SHLWAPI_H.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_SHLWAPI_H.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_SHLWAPI_H.c:2:10: fatal error: shlwapi.h: No such file or directory
+    2 | #include <shlwapi.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <shlwapi.h>
+
+
+int main(void){return 0;}
+
+Determining if files wincodec.h exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_072e4 && [1/2] Building C object CMakeFiles/cmTC_072e4.dir/HAVE_WINCODEC_H.c.o
+FAILED: CMakeFiles/cmTC_072e4.dir/HAVE_WINCODEC_H.c.o 
+/usr/bin/cc   -pthread  -fPIE -o CMakeFiles/cmTC_072e4.dir/HAVE_WINCODEC_H.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_WINCODEC_H.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_WINCODEC_H.c:2:10: fatal error: wincodec.h: No such file or directory
+    2 | #include <wincodec.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <wincodec.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_4f7b8 && [1/2] Building C object CMakeFiles/cmTC_4f7b8.dir/HAVE_WINDOWS_H.c.o
+FAILED: CMakeFiles/cmTC_4f7b8.dir/HAVE_WINDOWS_H.c.o 
+/usr/bin/cc   -pthread  -fPIE -o CMakeFiles/cmTC_4f7b8.dir/HAVE_WINDOWS_H.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c:2:10: fatal error: windows.h: No such file or directory
+    2 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_SSE41 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6fec9 && [1/2] Building C object CMakeFiles/cmTC_6fec9.dir/src.c.o
+FAILED: CMakeFiles/cmTC_6fec9.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_SSE41 -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread  -fPIE -o CMakeFiles/cmTC_6fec9.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:9: error: unknown type name ‘this’
+    5 |         this is not valid code
+      |         ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘not’
+    5 |         this is not valid code
+      |                 ^~~
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_SSE41)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MIPS32 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_3bec5 && [1/2] Building C object CMakeFiles/cmTC_3bec5.dir/src.c.o
+FAILED: CMakeFiles/cmTC_3bec5.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MIPS32 -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread  -fPIE -o CMakeFiles/cmTC_3bec5.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:9: error: unknown type name ‘this’
+    5 |         this is not valid code
+      |         ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘not’
+    5 |         this is not valid code
+      |                 ^~~
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MIPS32)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MIPS32 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_fcfd9 && [1/2] Building C object CMakeFiles/cmTC_fcfd9.dir/src.c.o
+FAILED: CMakeFiles/cmTC_fcfd9.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MIPS32 -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread -mips32 -fPIE -o CMakeFiles/cmTC_fcfd9.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-mips32’; did you mean ‘-mpc32’?
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MIPS32)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MIPS_DSP_R2 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_41efd && [1/2] Building C object CMakeFiles/cmTC_41efd.dir/src.c.o
+FAILED: CMakeFiles/cmTC_41efd.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MIPS_DSP_R2 -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread  -fPIE -o CMakeFiles/cmTC_41efd.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:9: error: unknown type name ‘this’
+    5 |         this is not valid code
+      |         ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘not’
+    5 |         this is not valid code
+      |                 ^~~
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MIPS_DSP_R2)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MIPS_DSP_R2 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_cde58 && [1/2] Building C object CMakeFiles/cmTC_cde58.dir/src.c.o
+FAILED: CMakeFiles/cmTC_cde58.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MIPS_DSP_R2 -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread -mdspr2 -fPIE -o CMakeFiles/cmTC_cde58.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-mdspr2’
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MIPS_DSP_R2)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test HAS_COMPILE_FLAG failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_dcaee && [1/2] Building C object CMakeFiles/cmTC_dcaee.dir/src.c.o
+FAILED: CMakeFiles/cmTC_dcaee.dir/src.c.o 
+/usr/bin/cc -DHAS_COMPILE_FLAG  -pthread -mdspr2 -fPIE   -mno-dspr2 -o CMakeFiles/cmTC_dcaee.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-mdspr2'
+cc: error: unrecognized command-line option '-mno-dspr2'; did you mean '-mno-sse2'?
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_NEON failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_b6c8b && [1/2] Building C object CMakeFiles/cmTC_b6c8b.dir/src.c.o
+FAILED: CMakeFiles/cmTC_b6c8b.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_NEON -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread  -fPIE -o CMakeFiles/cmTC_b6c8b.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:9: error: unknown type name ‘this’
+    5 |         this is not valid code
+      |         ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘not’
+    5 |         this is not valid code
+      |                 ^~~
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_NEON)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_NEON failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_cbd8a && [1/2] Building C object CMakeFiles/cmTC_cbd8a.dir/src.c.o
+FAILED: CMakeFiles/cmTC_cbd8a.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_NEON -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread -mfpu=neon -fPIE -o CMakeFiles/cmTC_cbd8a.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-mfpu=neon’
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_NEON)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MSA failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_f97c2 && [1/2] Building C object CMakeFiles/cmTC_f97c2.dir/src.c.o
+FAILED: CMakeFiles/cmTC_f97c2.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MSA -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread  -fPIE -o CMakeFiles/cmTC_f97c2.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:9: error: unknown type name ‘this’
+    5 |         this is not valid code
+      |         ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c:5:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘not’
+    5 |         this is not valid code
+      |                 ^~~
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MSA)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test WEBP_HAVE_FLAG_MSA failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_057a2 && [1/2] Building C object CMakeFiles/cmTC_057a2.dir/src.c.o
+FAILED: CMakeFiles/cmTC_057a2.dir/src.c.o 
+/usr/bin/cc -DWEBP_HAVE_FLAG_MSA -I/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp -pthread -mmsa -fPIE -o CMakeFiles/cmTC_057a2.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-mmsa’
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+      #include "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/external/libwebp/cmake/../src/dsp/dsp.h"
+      int main(void) {
+        #if !defined(WEBP_USE_MSA)
+        this is not valid code
+        #endif
+        return 0;
+      }
+    
+Performing C SOURCE FILE Test HAS_COMPILE_FLAG failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_8c8ff && [1/2] Building C object CMakeFiles/cmTC_8c8ff.dir/src.c.o
+FAILED: CMakeFiles/cmTC_8c8ff.dir/src.c.o 
+/usr/bin/cc -DHAS_COMPILE_FLAG  -pthread -mmsa -fPIE   -mno-msa -o CMakeFiles/cmTC_8c8ff.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2_image-2.8.0/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-mmsa'
+cc: error: unrecognized command-line option '-mno-msa'; did you mean '-Wno-hsa'?
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(void) { return 0; }

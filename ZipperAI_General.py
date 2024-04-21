@@ -245,15 +245,18 @@ class CustomMappingLayer(Layer):
 def autoencoder(input_shape, encoding_dim):
     # --- Encoding Part ---
     input_data = layers.Input(shape=input_shape)
-    encoded = layers.Dense(1024, activation='gelu')(input_data)
+    encoded = layers.Dense(512, activation='gelu')(input_data)
     #encoded = layers.Dropout(0.5)(encoded)
-    encoded = layers.Dense(512, activation='relu')(encoded)
+    encoded = layers.BatchNormalization()(encoded)
+    encoded = layers.Dense(256, activation='relu')(encoded)
     encoded = layers.BatchNormalization()(encoded)
     encoded = layers.Dense(encoding_dim, activation='relu')(encoded)
 
     # --- Decoding part ---
-    decoded = layers.Dense(512, activation='relu')(encoded)
-    decoded = layers.Dense(1024, activation='relu')(decoded)
+    decoded = layers.Dense(256, activation='relu')(encoded)
+    decoded = layers.BatchNormalization()(decoded)
+    decoded = layers.Dense(512, activation='relu')(decoded)
+    decoded = layers.BatchNormalization()(decoded)
     decoded = layers.Dense(input_shape[0], activation='sigmoid')(decoded)
 
     # Defining the models
@@ -262,7 +265,7 @@ def autoencoder(input_shape, encoding_dim):
 
     # Now the decoder part
     encoded_input = layers.Input(shape=(encoding_dim,))
-    decoder_layers = autoencoder_model.layers[-3:]  # Last 3 layers = decoder
+    decoder_layers = autoencoder_model.layers[-5:]  # Last 3 layers = decoder
     decoder = encoded_input
     for layer in decoder_layers:
         decoder = layer(decoder)
@@ -337,23 +340,42 @@ class ThresholdCallback(callbacks.Callback):
         self.threshold = threshold
         self.val_loss = []
         self.loss = []
+        self.meanLoss = []
         self.count = 0
 
     def on_epoch_end(self, epoch, logs=None):
-        if (epoch + 1) % 5 == 0:
+        if (epoch + 1) % 1 == 0:
             self.loss.append(logs['loss'])
-            #self.val_loss.append(logs['val_loss'])
+            self.val_loss.append(logs['val_loss'])
 
-        if (epoch + 1) % 500 == 0:
-            # Plot the loss
-            plt.plot(self.loss, label='Training Loss')
-            #plt.plot(self.val_loss, label='Validation Loss')
+        if (epoch + 1) % 100 == 0:  # Adjust this to calculate trend line every n epochs
+            # Calculate trend line
+            epoch_numbers = np.arange(len(self.loss)).reshape(-1, 1)
+            from sklearn.linear_model import LinearRegression
+            model = LinearRegression()
+            model.fit(epoch_numbers, self.loss)
+            trend_line = model.predict(epoch_numbers)
+
+            # Plot trend line (optional)
+            plt.plot(epoch_numbers, trend_line, color='red')
             plt.xlabel('Epochs')
-            plt.ylabel('Loss')
-            plt.title('Loss vs. Epochs')
+            plt.ylabel('Trend')
+            plt.title('Trend vs. Epochs')
             plt.legend()
             plt.grid(True)
             plt.show()
+
+        # if (epoch + 1) % 100 == 0:
+        #     # Plot the loss
+        #     plt.plot(self.loss, label='Training Loss')
+        #     plt.plot(self.val_loss, label='Validation Loss')
+        #     plt.xlabel('Epochs')
+        #     plt.ylabel('Loss')
+        #     plt.title('Loss vs. Epochs')
+        #     plt.legend()
+        #     plt.grid(True)
+        #     plt.show()
+        if (epoch + 1) % 10 == 0:
             # Save the encoder model
             autoencoder_model.save_weights('autoencoder_model_zip.weights.h5')
             encoder.save_weights('encoder_model_zip.weights.h5')
@@ -361,7 +383,7 @@ class ThresholdCallback(callbacks.Callback):
             # Save the decoder weights
             decoder.save_weights('decoder_weights_binary.weights.h5')
 
-        if epoch % 4000 == 0:
+        if epoch % 10000 == 0:
             self.loss = []
             self.val_loss = []
         if logs['loss'] <= self.threshold:
@@ -430,11 +452,11 @@ def chunk_data(bit_sequence, chunk_size):
 
 
 # Define your input_shape and encoding_dim
-input_shape = (72*8,)  # Assuming input data size of 8
+input_shape = (8,)  # Assuming input data size of 8
 encoding_dim = 1  # Adjust the encoding dimension as needed
 
 # Generate synthetic data
-num_samples = (1)
+num_samples = (10000)
 data = np.random.randint(2, size=(num_samples, *input_shape), dtype=np.int8)  # Generate random 0s and 1s
 
 # Split data into training and validation sets

@@ -1,0 +1,12 @@
+prefix=/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/dist
+exec_prefix=/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/dist
+libdir=/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/dist/lib
+includedir=/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/dist/include/libpng16
+
+Name: libpng
+Description: Loads and saves PNG files
+Version: 1.6.40
+Requires.private: zlib
+Libs: -L${libdir} -lpng16
+Libs.private: -lz -lm
+Cflags: -I${includedir}

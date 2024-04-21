@@ -1,0 +1,1027 @@
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_X86 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_dce9c && [1/2] Building C object CMakeFiles/cmTC_dce9c.dir/src.c.o
+FAILED: CMakeFiles/cmTC_dce9c.dir/src.c.o 
+/usr/bin/cc -DCHECK_CPU_ARCHITECTURE_X86   -o CMakeFiles/cmTC_dce9c.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: error: ‘choke’ undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:8: error: expected ‘;’ before ‘}’ token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__i386__) || defined(__i486__) || defined(__i586__) || defined(__i686__) ||defined( __i386) || defined(_M_IX86)
+  return 0;
+#else
+  choke
+#endif
+}
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_ARM32 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a778d && [1/2] Building C object CMakeFiles/cmTC_a778d.dir/src.c.o
+FAILED: CMakeFiles/cmTC_a778d.dir/src.c.o 
+/usr/bin/cc -DCHECK_CPU_ARCHITECTURE_ARM32   -o CMakeFiles/cmTC_a778d.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: error: ‘choke’ undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:8: error: expected ‘;’ before ‘}’ token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__arm__) || defined(_M_ARM)
+  return 0;
+#else
+  choke
+#endif
+}
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_ARM64 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_25a63 && [1/2] Building C object CMakeFiles/cmTC_25a63.dir/src.c.o
+FAILED: CMakeFiles/cmTC_25a63.dir/src.c.o 
+/usr/bin/cc -DCHECK_CPU_ARCHITECTURE_ARM64   -o CMakeFiles/cmTC_25a63.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: error: ‘choke’ undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:8: error: expected ‘;’ before ‘}’ token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__aarch64__) || defined(_M_ARM64)
+  return 0;
+#else
+  choke
+#endif
+}
+
+Performing C SOURCE FILE Test CHECK_CPU_ARCHITECTURE_LOONGARCH64 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a4e01 && [1/2] Building C object CMakeFiles/cmTC_a4e01.dir/src.c.o
+FAILED: CMakeFiles/cmTC_a4e01.dir/src.c.o 
+/usr/bin/cc -DCHECK_CPU_ARCHITECTURE_LOONGARCH64   -o CMakeFiles/cmTC_a4e01.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: error: ‘choke’ undeclared (first use in this function)
+    6 |   choke
+      |   ^~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:6:8: error: expected ‘;’ before ‘}’ token
+    6 |   choke
+      |        ^
+      |        ;
+    7 | #endif
+    8 | }
+      | ~       
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+int main(int argc, char *argv[]) {
+#if defined(__loongarch64)
+  return 0;
+#else
+  choke
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_fdd4e && [1/2] Building C object CMakeFiles/cmTC_fdd4e.dir/src.c.o
+FAILED: CMakeFiles/cmTC_fdd4e.dir/src.c.o 
+/usr/bin/cc -DHAVE_ALTIVEC_H_HDR  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos" -maltivec -o CMakeFiles/cmTC_fdd4e.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-maltivec’
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test CPU_SUPPORTS_ALTIVEC failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_b2a6a && [1/2] Building C object CMakeFiles/cmTC_b2a6a.dir/src.c.o
+FAILED: CMakeFiles/cmTC_b2a6a.dir/src.c.o 
+/usr/bin/cc -DCPU_SUPPORTS_ALTIVEC  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos" -maltivec -o CMakeFiles/cmTC_b2a6a.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option ‘-maltivec’
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { return 0; }
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_00455 && [1/2] Building C object CMakeFiles/cmTC_00455.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_00455.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_00455.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the strlcpy exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_572e9 && [1/2] Building C object CMakeFiles/cmTC_572e9.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_572e9.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_572e9.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcpy’ undeclared (first use in this function); did you mean ‘strncpy’?
+   14 |   return ((int*)(&strlcpy))[argc];
+      |                   ^~~~~~~
+      |                   strncpy
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcpy
+  return ((int*)(&strlcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcat exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_ff1b5 && [1/2] Building C object CMakeFiles/cmTC_ff1b5.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_ff1b5.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_ff1b5.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcat’ undeclared (first use in this function); did you mean ‘strncat’?
+   14 |   return ((int*)(&strlcat))[argc];
+      |                   ^~~~~~~
+      |                   strncat
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strrev exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_4f034 && [1/2] Building C object CMakeFiles/cmTC_4f034.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_4f034.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_4f034.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strrev’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strrev))[argc];
+      |                   ^~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strrev
+  return ((int*)(&_strrev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strupr exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_62d6f && [1/2] Building C object CMakeFiles/cmTC_62d6f.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_62d6f.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_62d6f.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strupr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strupr))[argc];
+      |                   ^~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strupr
+  return ((int*)(&_strupr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strlwr exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_bdba1 && [1/2] Building C object CMakeFiles/cmTC_bdba1.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_bdba1.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_bdba1.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strlwr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strlwr))[argc];
+      |                   ^~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strlwr
+  return ((int*)(&_strlwr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the itoa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_fa001 && [1/2] Building C object CMakeFiles/cmTC_fa001.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_fa001.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_fa001.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘itoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&itoa))[argc];
+      |                   ^~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef itoa
+  return ((int*)(&itoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ltoa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_8b3c1 && [1/2] Building C object CMakeFiles/cmTC_8b3c1.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_8b3c1.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_8b3c1.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ltoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ltoa))[argc];
+      |                   ^~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ltoa
+  return ((int*)(&_ltoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _uitoa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_76e60 && [1/2] Building C object CMakeFiles/cmTC_76e60.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_76e60.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_76e60.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_uitoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_uitoa))[argc];
+      |                   ^~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _uitoa
+  return ((int*)(&_uitoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ultoa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_31530 && [1/2] Building C object CMakeFiles/cmTC_31530.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_31530.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_31530.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ultoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ultoa))[argc];
+      |                   ^~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ultoa
+  return ((int*)(&_ultoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _i64toa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a828c && [1/2] Building C object CMakeFiles/cmTC_a828c.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_a828c.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_a828c.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_i64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_i64toa))[argc];
+      |                   ^~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _i64toa
+  return ((int*)(&_i64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ui64toa exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_23b78 && [1/2] Building C object CMakeFiles/cmTC_23b78.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_23b78.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_23b78.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ui64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ui64toa))[argc];
+      |                   ^~~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ui64toa
+  return ((int*)(&_ui64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _stricmp exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_5d0e1 && [1/2] Building C object CMakeFiles/cmTC_5d0e1.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_5d0e1.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_5d0e1.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_stricmp))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _stricmp
+  return ((int*)(&_stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strnicmp exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_dd252 && [1/2] Building C object CMakeFiles/cmTC_dd252.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_dd252.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_dd252.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strnicmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_strnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   strncmp
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strnicmp
+  return ((int*)(&_strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsdup exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_857d6 && [1/2] Building C object CMakeFiles/cmTC_857d6.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_857d6.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_857d6.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsdup’ undeclared (first use in this function); did you mean ‘wcsdup’?
+   14 |   return ((int*)(&_wcsdup))[argc];
+      |                   ^~~~~~~
+      |                   wcsdup
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsdup
+  return ((int*)(&_wcsdup))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcat exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_0269b && [1/2] Building C object CMakeFiles/cmTC_0269b.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_0269b.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_0269b.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcat’ undeclared (first use in this function); did you mean ‘wcsncat’?
+   14 |   return ((int*)(&wcslcat))[argc];
+      |                   ^~~~~~~
+      |                   wcsncat
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcat
+  return ((int*)(&wcslcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcpy exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_887b9 && [1/2] Building C object CMakeFiles/cmTC_887b9.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_887b9.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_887b9.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcpy’ undeclared (first use in this function); did you mean ‘wcsncpy’?
+   14 |   return ((int*)(&wcslcpy))[argc];
+      |                   ^~~~~~~
+      |                   wcsncpy
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcpy
+  return ((int*)(&wcslcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsicmp exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_c84a6 && [1/2] Building C object CMakeFiles/cmTC_c84a6.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_c84a6.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_c84a6.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsicmp))[argc];
+      |                   ^~~~~~~~
+      |                   wcsncmp
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsicmp
+  return ((int*)(&_wcsicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsnicmp exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_fd481 && [1/2] Building C object CMakeFiles/cmTC_fd481.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_fd481.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_fd481.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsnicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   wcsncmp
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsnicmp
+  return ((int*)(&_wcsnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sysctlbyname exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_df1de && [1/2] Building C object CMakeFiles/cmTC_df1de.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_df1de.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_df1de.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: sys/sysctl.h: No such file or directory
+    3 | #include <sys/sysctl.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysctlbyname
+  return ((int*)(&sysctlbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_cef26 && [1/2] Building C object CMakeFiles/cmTC_cef26.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_cef26.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_cef26.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘elf_aux_info’ undeclared (first use in this function)
+    8 |   return ((int*)(&elf_aux_info))[argc];
+      |                   ^~~~~~~~~~~~
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_1a9f6 && [1/2] Building C object CMakeFiles/cmTC_1a9f6.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_1a9f6
+FAILED: cmTC_1a9f6 
+: && /usr/bin/cc -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open  -D_GNU_SOURCE=1  CMakeFiles/cmTC_1a9f6.dir/CheckFunctionExists.c.o -o cmTC_1a9f6  -liconv && :
+/usr/bin/ld: cannot find -liconv: No such file or directory
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the alloca exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_97b45 && [1/2] Building C object CMakeFiles/cmTC_97b45.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_97b45.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_97b45.dir/CheckSymbolExists.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘alloca’ undeclared (first use in this function); did you mean ‘valloc’?
+    8 |   return ((int*)(&alloca))[argc];
+      |                   ^~~~~~
+      |                   valloc
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file audio/audiolib.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_5cffe && [1/2] Building C object CMakeFiles/cmTC_5cffe.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_5cffe.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_5cffe.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: audio/audiolib.h: No such file or directory
+    1 | #include <audio/audiolib.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test HAVE_RPI failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a0662 && [1/2] Building C object CMakeFiles/cmTC_a0662.dir/src.c.o
+FAILED: CMakeFiles/cmTC_a0662.dir/src.c.o 
+/usr/bin/cc -DHAVE_RPI  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1  -I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux/  -L/opt/vc/lib -o CMakeFiles/cmTC_a0662.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: bcm_host.h: No such file or directory
+    2 |         #include <bcm_host.h>
+      |                  ^~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+        #include <bcm_host.h>
+        #include <EGL/eglplatform.h>
+        int main(int argc, char **argv) {
+          EGL_DISPMANX_WINDOW_T window;
+          bcm_host_init();
+        }
+Performing C SOURCE FILE Test HAVE_OPENGLES_V1 failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7d9a9 && [1/2] Building C object CMakeFiles/cmTC_7d9a9.dir/src.c.o
+FAILED: CMakeFiles/cmTC_7d9a9.dir/src.c.o 
+/usr/bin/cc -DHAVE_OPENGLES_V1  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_7d9a9.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: GLES/gl.h: No such file or directory
+    2 |         #include <GLES/gl.h>
+      |                  ^~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+        #include <GLES/gl.h>
+        #include <GLES/glext.h>
+        int main (int argc, char** argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_VIVANTE_VDK failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_cde01 && [1/2] Building C object CMakeFiles/cmTC_cde01.dir/src.c.o
+FAILED: CMakeFiles/cmTC_cde01.dir/src.c.o 
+/usr/bin/cc -DHAVE_VIVANTE_VDK  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_cde01.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: gc_vdk.h: No such file or directory
+    2 |         #include <gc_vdk.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+        #include <gc_vdk.h>
+        int main(int argc, char** argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_VIVANTE_EGL_FB failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_04166 && [1/2] Building C object CMakeFiles/cmTC_04166.dir/src.c.o
+FAILED: CMakeFiles/cmTC_04166.dir/src.c.o 
+/usr/bin/cc -DHAVE_VIVANTE_EGL_FB  -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_04166.dir/src.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/src.c:4:18: fatal error: EGL/eglvivante.h: No such file or directory
+    4 |         #include <EGL/eglvivante.h>
+      |                  ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+        #define LINUX
+        #define EGL_API_FB
+        #include <EGL/eglvivante.h>
+        int main(int argc, char** argv) { return 0; }
+Determining if the include file libudev.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_b090f && [1/2] Building C object CMakeFiles/cmTC_b090f.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_b090f.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_b090f.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libudev.h: No such file or directory
+    1 | #include <libudev.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files pthread_np.h exist failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_9b1ab && [1/2] Building C object CMakeFiles/cmTC_9b1ab.dir/HAVE_PTHREAD_NP_H.c.o
+FAILED: CMakeFiles/cmTC_9b1ab.dir/HAVE_PTHREAD_NP_H.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos"  -D_GNU_SOURCE=1 -D_REENTRANT -pthread -o CMakeFiles/cmTC_9b1ab.dir/HAVE_PTHREAD_NP_H.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:2:10: fatal error: pthread_np.h: No such file or directory
+    2 | #include <pthread_np.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_48eea && [1/2] Building C object CMakeFiles/cmTC_48eea.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_48eea.dir/CheckIncludeFile.c.o 
+/usr/bin/cc   -idirafter "/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/src/video/khronos" -DHAVE_LINUX_VERSION_H  -D_GNU_SOURCE=1 -o CMakeFiles/cmTC_48eea.dir/CheckIncludeFile.c.o -c /home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/disd/Documents/Git/ZipperAI/exe/kivy-deps-build/kivy-dependencies/build/SDL2-2.28.5/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: samplerate.h: No such file or directory
+    1 | #include <samplerate.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
